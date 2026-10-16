@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- Primary Meta Tags -->
+  <title>Thevindu Dharmadasa | Data Science Undergraduate & Full-Stack Software Engineer</title>
+  <meta name="title" content="Thevindu Dharmadasa | Data Science Undergraduate & Full-Stack Software Engineer">
+  <meta name="description" content="Portfolio of Thevindu Dharmadasa: Data Science undergraduate at SLIIT, hackathon champion, machine learning developer, and full-stack software engineer specialized in Python, Java, React, Spring Boot, PyTorch, and Data Warehousing.">
+  <meta name="keywords" content="Thevindu Dharmadasa, Thevindu Hansaja, Data Science, Machine Learning, Deep Learning, Software Engineer, Full-Stack, Java Spring Boot, React, PyTorch, SLIIT, Portfolio, Sri Lanka">
+  <meta name="author" content="Thevindu Dharmadasa">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thevindudha.github.io/portfolio-website/">
+  <meta property="og:title" content="Thevindu Dharmadasa | Data Science Undergraduate & Full-Stack Engineer">
+  <meta property="og:description" content="Explore machine learning systems, full-stack web applications, and data engineering pipelines built by Thevindu Dharmadasa.">
+  <meta property="og:image" content="assets/images/banner.svg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://thevindudha.github.io/portfolio-website/">
+  <meta property="twitter:title" content="Thevindu Dharmadasa | Portfolio">
+  <meta property="twitter:description" content="Data Science Undergraduate, Hackathon Winner & Full-Stack Developer.">
+  <meta property="twitter:image" content="assets/images/banner.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Background Canvas for Interactive Constellation / Particles -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  <div class="ambient-glow-3"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Thevindu Dharmadasa Home">
+        <div class="logo-badge">TD</div>
+        <span>THEVINDU<span class="text-gradient">.DEV</span></span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#resume-spotlight" class="nav-link">Resumes</a></li>
+          <li><a href="#skills" class="nav-link">Arsenal</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#timeline" class="nav-link">Journey</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Header Actions -->
+      <div class="nav-actions">
+        <!-- Dual Resume Split Dropdown -->
+        <div class="dropdown-container">
+          <button class="btn btn-secondary btn-sm" id="nav-resume-btn" aria-haspopup="true" aria-expanded="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Resume</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="javascript:void(0)" onclick="downloadResume('ds')" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+              </div>
+              <div class="dropdown-item-info">
+                <span class="dropdown-item-title">Data Science CV</span>
+                <span class="dropdown-item-desc">DS, AI/ML, Data Engineering (PDF)</span>
+              </div>
+            </a>
+            <a href="javascript:void(0)" onclick="downloadResume('se')" class="dropdown-item">
+              <div class="dropdown-item-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <div class="dropdown-item-info">
+                <span class="dropdown-item-title">Software Engineering CV</span>
+                <span class="dropdown-item-desc">Full-Stack, Spring Boot, React (PDF)</span>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="dropdown-item open-resume-modal-btn">
+              <div class="dropdown-item-info" style="padding-left: 8px;">
+                <span class="dropdown-item-title" style="color: var(--accent-cyan);">⚡ View Dual Comparison Modal</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle theme">
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Open mobile navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-drawer-header">
+      <div class="nav-logo">
+        <div class="logo-badge">TD</div>
+        <span>THEVINDU</span>
+      </div>
+      <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#resume-spotlight" class="mobile-nav-link">Resumes &amp; CVs</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Arsenal</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+      <li><a href="#timeline" class="mobile-nav-link">Journey &amp; Awards</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 14px;">
+      <button class="btn btn-primary btn-sm" onclick="downloadResume('ds')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        <span>Data Science CV</span>
+      </button>
+      <button class="btn btn-secondary btn-sm" onclick="downloadResume('se')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        <span>Software Engineering CV</span>
+      </button>
+      <button class="btn btn-outline btn-sm" id="mobile-theme-toggle-btn">
+        <span>Toggle Dark / Light Mode</span>
+      </button>
+    </div>
+  </aside>
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+  <!-- Main Content Wrapper -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <!-- Availability Pill -->
+          <div class="status-badge">
+            <span class="status-pulse-dot"></span>
+            <span>Open for Opportunities (AI/ML • SE • Data Science)</span>
+          </div>
+
+          <!-- Hero Headline -->
+          <h1 class="hero-title">
+            Hi, I'm <br>
+            <span class="text-gradient">Thevindu Dharmadasa</span>
+          </h1>
+
+          <!-- Animated Typing Subhead -->
+          <div class="hero-typing-wrap">
+            <span id="hero-typing-text">Data Science Undergraduate &amp; Analyst</span>
+            <span class="hero-cursor">_</span>
+          </div>
+
+          <!-- Bio Pitch -->
+          <p class="hero-bio">
+            Data Science Undergraduate at <strong>SLIIT</strong>, Hackathon Champion &amp; Full-Stack Developer bridging Artificial Intelligence, Deep Learning, Data Warehousing, and Scalable Software Architecture.
+          </p>
+
+          <!-- Badges Row -->
+          <div class="hero-badges-row">
+            <span class="hero-badge-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <span>SLIIT B.Sc. (Hons) Data Science • 3.5 CGPA</span>
+            </span>
+            <span class="hero-badge-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+              <span>1st Place Champion • Mini Hackathon 2026</span>
+            </span>
+            <span class="hero-badge-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>Dean's List Awardee</span>
+            </span>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore Featured Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+
+            <!-- Dual Resume Trigger -->
+            <div class="dropdown-container">
+              <button class="btn btn-secondary open-resume-modal-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Download Resume (DS / SE)</span>
+              </button>
+            </div>
+
+            <a href="#contact" class="btn btn-outline">
+              <span>Get in Touch</span>
+            </a>
+          </div>
+
+          <!-- Social Proof Hub -->
+          <div class="hero-socials">
+            <a href="https://github.com/ThevinduDha" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/thevindu-dharmadasa" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://twitter.com/thevinduhansaja" target="_blank" rel="noopener noreferrer" class="social-link" title="Twitter / X">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="mailto:thevinduhansaja81@gmail.com" class="social-link" title="Email Thevindu">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+            <a href="https://instagram.com/officialthenx03" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Portrait Card -->
+        <div class="hero-visual">
+          <div class="avatar-frame-wrap">
+            <div class="avatar-glow-ring"></div>
+            <div class="avatar-card">
+              <img src="assets/images/thevindu_profile.jpg" alt="Thevindu Dharmadasa - Data Scientist & Software Engineer" class="avatar-img" width="460" height="460">
+            </div>
+
+            <!-- Floating Orbital Tech Badges -->
+            <div class="float-tech-pill pill-1">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f43f5e" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              <span>PyTorch &amp; DL</span>
+            </div>
+            <div class="float-tech-pill pill-2">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00dfd8" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              <span>Spring Boot &amp; Java</span>
+            </div>
+            <div class="float-tech-pill pill-3">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              <span>SQL &amp; DW ETL</span>
+            </div>
+            <div class="float-tech-pill pill-4">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <span>React &amp; FastAPI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE METRICS COUNTER STRIP -->
+    <section class="stats-strip" aria-label="Key Achievements & Metrics">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number" data-target="3.5">0.0</span>
+            <span class="stat-label">CGPA / 4.0 • Dean's List Awardee</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="21">0</span>
+            <span class="stat-label">GitHub Repositories &amp; Systems</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="99000">0</span>
+            <span class="stat-label">Transactions Modeled in DW / BI</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="1">0</span>
+            <span class="stat-label">1st Place Champion • Hackathon 2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DUAL RESUME SPOTLIGHT SECTION -->
+    <section class="section-wrapper resume-spotlight-section" id="resume-spotlight">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Dual Curriculum Vitae</span>
+          <h2 class="section-title">Tailored Resumes for <span class="text-gradient">Specialized Roles</span></h2>
+          <p class="section-desc">
+            Whether you are recruiting for an intensive Data Science / AI engineering team or a high-velocity Software Engineering &amp; Systems architecture position, download the dedicated resume tailored to your technical stack.
+          </p>
+        </div>
+
+        <div class="resume-dual-grid">
+          <!-- RESUME CARD 1: DATA SCIENCE & AI -->
+          <div class="glass-panel resume-card ds-card">
+            <div>
+              <div class="resume-card-header">
+                <div class="resume-icon-box">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                </div>
+                <div>
+                  <span class="resume-track-tag">Track A // Intelligence &amp; Analytics</span>
+                  <h3 class="resume-card-title">Data Science, AI &amp; Data Engineering</h3>
+                </div>
+              </div>
+
+              <p class="resume-desc">
+                Specialized in statistical modeling, end-to-end data warehousing, deep learning computer vision, ETL pipelines, and business intelligence dashboards.
+              </p>
+
+              <ul class="resume-key-points">
+                <li class="resume-key-point">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Machine Learning &amp; DL:</strong> PyTorch (EfficientNet-B0), OpenCV HSV severity, Scikit-learn, XGBoost, RAG Pipelines &amp; Gemini.</span>
+                </li>
+                <li class="resume-key-point">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Data Engineering &amp; BI:</strong> SSIS ETL pipelines, Star Schema modeling, SQL Server (MSSQL), Power BI &amp; complex DAX.</span>
+                </li>
+                <li class="resume-key-point">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Flagship DS Projects:</strong> AgriShield AI (20K+ images), Olist 99K+ DW/BI pipeline, Walmart Sales Analytics, Stroke Prediction.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="resume-card-footer">
+              <button class="btn btn-primary" onclick="downloadResume('ds')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Download Data Science CV (PDF)</span>
+              </button>
+              <a href="assets/cv/Thevindu_Dharmadasa_DataScience_CV.pdf" target="_blank" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                <span>Direct PDF Preview</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- RESUME CARD 2: SOFTWARE ENGINEERING -->
+          <div class="glass-panel resume-card se-card">
+            <div>
+              <div class="resume-card-header">
+                <div class="resume-icon-box">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+                <div>
+                  <span class="resume-track-tag">Track B // Architecture &amp; Full-Stack</span>
+                  <h3 class="resume-card-title">Software Engineering &amp; Systems</h3>
+                </div>
+              </div>
+
+              <p class="resume-desc">
+                Specialized in object-oriented architecture, robust Java Spring Boot RESTful APIs, modern React/Vite frontends, secure JWT authorization, and relational databases.
+              </p>
+
+              <ul class="resume-key-points">
+                <li class="resume-key-point">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Backend &amp; Architecture:</strong> Java Spring Boot, Spring Data JPA, Hibernate ORM, FastAPI, Node.js, Express, JWT Security.</span>
+                </li>
+                <li class="resume-key-point">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Frontend &amp; UX:</strong> React.js, Next.js, Vite, TypeScript, TailwindCSS, PayHere Sandbox payment integration.</span>
+                </li>
+                <li class="resume-key-point">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Flagship SE Projects:</strong> StudyAI (MERN + RAG), LankaRail (Spring Boot Train Reservation), Athukorala Hardware System, Groove Haven.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="resume-card-footer">
+              <button class="btn btn-primary" onclick="downloadResume('se')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Download Software Engineering CV (PDF)</span>
+              </button>
+              <a href="assets/cv/Thevindu_Dharmadasa_SoftwareEngineering_CV.pdf" target="_blank" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                <span>Direct PDF Preview</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME & ACADEMIC DISTINCTION -->
+    <section class="section-wrapper" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Background &amp; Philosophy</span>
+          <h2 class="section-title">Engineering Intelligence with <span class="text-gradient">Mathematical Rigor</span></h2>
+          <p class="section-desc">
+            Blending an analytical data science mindset with disciplined software engineering to solve tangible industrial problems.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative">
+            <p class="about-text">
+              I am a <strong>Data Science undergraduate at SLIIT (Sri Lanka Institute of Information Technology)</strong>, maintaining a <strong>3.5 CGPA</strong> and honored on the <strong>Dean's List</strong>. I view data and code as twin disciplines: algorithms find the patterns, and disciplined software architecture brings them reliably to users.
+            </p>
+            <p class="about-text">
+              My engineering trajectory spans from training deep learning classifiers on 20,000+ agricultural leaf images in PyTorch, to designing enterprise Star Schemas handling 99,000+ e-commerce transactions in SQL Server and SSIS, to engineering high-concurrency train reservation backends in Java Spring Boot.
+            </p>
+
+            <!-- Education Box -->
+            <div class="education-highlight-box">
+              <div class="edu-item">
+                <div class="edu-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                </div>
+                <div class="edu-details">
+                  <h4>Bachelor of Science (Hons) in Data Science</h4>
+                  <div class="edu-school">SLIIT (Sri Lanka Institute of Information Technology), Malabe</div>
+                  <div class="edu-meta">Jun 2024 – Jun 2028 • CGPA: 3.5 / 4.0 • Dean's List Awardee (Y1S2)</div>
+                </div>
+              </div>
+
+              <div class="edu-item">
+                <div class="edu-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                </div>
+                <div class="edu-details">
+                  <h4>GCE Advanced Level (Physical Science Stream)</h4>
+                  <div class="edu-school">Royal College, Colombo (2022)</div>
+                  <div class="edu-meta">Combined Mathematics, Physics, Chemistry</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Coursework Badges Grid -->
+            <div class="coursework-box">
+              <h4>Academic Coursework Performance</h4>
+              <div class="coursework-grid">
+                <div class="course-badge">
+                  <span class="course-title">Software Engineering</span>
+                  <span class="course-score">92%</span>
+                </div>
+                <div class="course-badge">
+                  <span class="course-title">Data Visualization</span>
+                  <span class="course-score">87%</span>
+                </div>
+                <div class="course-badge">
+                  <span class="course-title">Machine Learning</span>
+                  <span class="course-score">85%</span>
+                </div>
+                <div class="course-badge">
+                  <span class="course-title">OOP (Object-Oriented)</span>
+                  <span class="course-score">85%</span>
+                </div>
+                <div class="course-badge">
+                  <span class="course-title">Database Systems</span>
+                  <span class="course-score">81%</span>
+                </div>
+                <div class="course-badge">
+                  <span class="course-title">Data Structures &amp; Algo</span>
+                  <span class="course-score">80%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Code Terminal -->
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">thevindu@arch-workstation: ~/portfolio</span>
+              <div style="width: 36px;"></div>
+            </div>
+
+            <div class="terminal-tabs">
+              <div class="term-tab active" data-tab="overview">overview.py</div>
+              <div class="term-tab" data-tab="tech">tech_stack.json</div>
+              <div class="term-tab" data-tab="philosophy">philosophy.md</div>
+            </div>
+
+            <pre class="terminal-body" id="terminal-content"><span class="code-comment"># Thevindu Dharmadasa - Developer Blueprint</span>
+<span class="code-keyword">class</span> <span class="code-fn">ThevinduDharmadasa</span>:
+    <span class="code-keyword">def</span> <span class="code-fn">__init__</span>(<span class="code-var">self</span>):
+        <span class="code-var">self</span>.name = <span class="code-string">"Thevindu Dharmadasa"</span>
+        <span class="code-var">self</span>.institution = <span class="code-string">"SLIIT (Sri Lanka)"</span>
+        <span class="code-var">self</span>.degree = <span class="code-string">"B.Sc. (Hons) in Data Science"</span>
+        <span class="code-var">self</span>.gpa = <span class="code-num">3.5</span>  <span class="code-comment"># Dean's List Awardee</span>
+        <span class="code-var">self</span>.specializations = [
+            <span class="code-string">"Data Science & AI/ML"</span>,
+            <span class="code-string">"Full-Stack Software Engineering"</span>,
+            <span class="code-string">"Data Engineering & BI Pipelines"</span>
+        ]
+        <span class="code-var">self</span>.status = <span class="code-string">"Open for Internships & Projects"</span>
+
+    <span class="code-keyword">def</span> <span class="code-fn">get_mission</span>(<span class="code-var">self</span>):
+        <span class="code-keyword">return</span> <span class="code-string">"Transforming raw data into actionable intelligence and building scalable software."</span></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH ARSENAL & SKILLS SECTION -->
+    <section class="section-wrapper" id="skills" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Technical Arsenal</span>
+          <h2 class="section-title">Proficiencies &amp; <span class="text-gradient">Tooling</span></h2>
+          <p class="section-desc">
+            A comprehensive, battle-tested toolset spanning languages, deep learning frameworks, databases, and enterprise backends.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="skills-filter-nav">
+          <button class="filter-btn active" data-filter="all">All Arsenal (24)</button>
+          <button class="filter-btn" data-filter="lang">Languages</button>
+          <button class="filter-btn" data-filter="ai">AI / ML &amp; Data</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack &amp; Backend</button>
+          <button class="filter-btn" data-filter="db">Databases &amp; BI</button>
+          <button class="filter-btn" data-filter="tools">DevOps &amp; Tools</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid">
+          <!-- Python -->
+          <div class="skill-card" data-category="lang ai">
+            <div class="skill-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+            </div>
+            <div class="skill-name">Python</div>
+            <span class="skill-level-badge">Advanced • Core</span>
+          </div>
+
+          <!-- Java -->
+          <div class="skill-card" data-category="lang fullstack">
+            <div class="skill-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+            </div>
+            <div class="skill-name">Java</div>
+            <span class="skill-level-badge">OOP • Spring Boot</span>
+          </div>
+
+          <!-- SQL -->
+          <div class="skill-card" data-category="lang db">
+            <div class="skill-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            </div>
+            <div class="skill-name">SQL</div>
+            <span class="skill-level-badge">Postgres • MSSQL • MySQL</span>
+          </div>
+
+          <!-- JavaScript / TypeScript -->
+          <div class="skill-card" data-category="lang fullstack">
+            <div class="skill-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <div class="skill-name">JavaScript &amp; TS</div>
+            <span class="skill-level-badge">ES6+ • React • Node</span>
+          </div>
+
+          <!-- PyTorch -->
+          <div class="skill-card" data-category="ai">
+            <div class="skill-icon-wrap" style="color: #ef4444;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <div class="skill-name">PyTorch</div>
+            <span class="skill-level-badge">Transfer Learning • CNN</span>
+          </div>
+
+          <!-- Scikit-Learn & XGBoost -->
+          <div class="skill-card" data-category="ai">
+            <div class="skill-icon-wrap" style="color: #f59e0b;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+            </div>
+            <div class="skill-name">Scikit-Learn &amp; XGB</div>
+            <span class="skill-level-badge">Classification • Regression</span>
+          </div>
+
+          <!-- OpenCV -->
+          <div class="skill-card" data-category="ai">
+            <div class="skill-icon-wrap" style="color: #8b5cf6;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            </div>
+            <div class="skill-name">OpenCV</div>
+            <span class="skill-level-badge">HSV Analysis • Vision</span>
+          </div>
+
+          <!-- RAG & Vector Search -->
+          <div class="skill-card" data-category="ai">
+            <div class="skill-icon-wrap" style="color: #00dfd8;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+            <div class="skill-name">RAG &amp; Embeddings</div>
+            <span class="skill-level-badge">Gemini API • Cosine Sim</span>
+          </div>
+
+          <!-- Spring Boot -->
+          <div class="skill-card" data-category="fullstack">
+            <div class="skill-icon-wrap" style="color: #10b981;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 0-9.95 9h11.9a2 2 0 0 1 2 2v3.95A10 10 0 0 0 12 2z"></path><path d="M2.05 13a10 10 0 0 0 9.95 9v-7.95a2 2 0 0 0-2-2H2.05z"></path></svg>
+            </div>
+            <div class="skill-name">Spring Boot</div>
+            <span class="skill-level-badge">REST APIs • JPA • JWT</span>
+          </div>
+
+          <!-- React.js & Vite -->
+          <div class="skill-card" data-category="fullstack">
+            <div class="skill-icon-wrap" style="color: #38bdf8;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"></circle><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(30 12 12)"></ellipse><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(90 12 12)"></ellipse><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(150 12 12)"></ellipse></svg>
+            </div>
+            <div class="skill-name">React.js &amp; Vite</div>
+            <span class="skill-level-badge">Modern Hooks • SPAs</span>
+          </div>
+
+          <!-- FastAPI -->
+          <div class="skill-card" data-category="fullstack ai">
+            <div class="skill-icon-wrap" style="color: #00dfd8;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <div class="skill-name">FastAPI</div>
+            <span class="skill-level-badge">High-speed ML Serving</span>
+          </div>
+
+          <!-- Node.js & Express -->
+          <div class="skill-card" data-category="fullstack">
+            <div class="skill-icon-wrap" style="color: #22c55e;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon></svg>
+            </div>
+            <div class="skill-name">Node &amp; Express</div>
+            <span class="skill-level-badge">MERN Stack • REST APIs</span>
+          </div>
+
+          <!-- SSIS & Data Warehousing -->
+          <div class="skill-card" data-category="db">
+            <div class="skill-icon-wrap" style="color: #38bdf8;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            </div>
+            <div class="skill-name">ETL (SSIS) &amp; DW</div>
+            <span class="skill-level-badge">Star Schema • Data Marts</span>
+          </div>
+
+          <!-- Power BI & DAX -->
+          <div class="skill-card" data-category="db ai">
+            <div class="skill-icon-wrap" style="color: #f59e0b;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </div>
+            <div class="skill-name">Power BI &amp; DAX</div>
+            <span class="skill-level-badge">OLAP • Analytics Dashboards</span>
+          </div>
+
+          <!-- Databricks & Spark -->
+          <div class="skill-card" data-category="db ai">
+            <div class="skill-icon-wrap" style="color: #ef4444;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path></svg>
+            </div>
+            <div class="skill-name">Databricks</div>
+            <span class="skill-level-badge">Certified • Data Engineering</span>
+          </div>
+
+          <!-- PostgreSQL & Supabase -->
+          <div class="skill-card" data-category="db">
+            <div class="skill-icon-wrap" style="color: #3b82f6;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            </div>
+            <div class="skill-name">PostgreSQL</div>
+            <span class="skill-level-badge">Relational • Supabase</span>
+          </div>
+
+          <!-- MySQL -->
+          <div class="skill-card" data-category="db">
+            <div class="skill-icon-wrap" style="color: #0284c7;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            </div>
+            <div class="skill-name">MySQL</div>
+            <span class="skill-level-badge">Spring Data JPA • Normalization</span>
+          </div>
+
+          <!-- MongoDB -->
+          <div class="skill-card" data-category="db fullstack">
+            <div class="skill-icon-wrap" style="color: #10b981;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+            </div>
+            <div class="skill-name">MongoDB</div>
+            <span class="skill-level-badge">NoSQL • Aggregations</span>
+          </div>
+
+          <!-- Git & GitHub -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon-wrap" style="color: #f43f5e;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+            </div>
+            <div class="skill-name">Git &amp; GitHub</div>
+            <span class="skill-level-badge">Version Control • Actions</span>
+          </div>
+
+          <!-- Postman & API Testing -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon-wrap" style="color: #f59e0b;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            </div>
+            <div class="skill-name">Postman</div>
+            <span class="skill-level-badge">API Validation • Automation</span>
+          </div>
+
+          <!-- Linux & Bash -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon-wrap" style="color: #a855f7;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><line x1="6" y1="12" x2="10" y2="12"></line><line x1="14" y1="12" x2="18" y2="12"></line></svg>
+            </div>
+            <div class="skill-name">Linux &amp; Shell</div>
+            <span class="skill-level-badge">CLI • Scripts • Systems</span>
+          </div>
+
+          <!-- R & Statistical Computing -->
+          <div class="skill-card" data-category="lang ai">
+            <div class="skill-icon-wrap" style="color: #3b82f6;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </div>
+            <div class="skill-name">R Language</div>
+            <span class="skill-level-badge">Statistical Inference • EDA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SHOWCASE -->
+    <section class="section-wrapper" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Selected Works</span>
+          <h2 class="section-title">Production Systems &amp; <span class="text-gradient">AI Platforms</span></h2>
+          <p class="section-desc">
+            Explore deep learning vision classifiers, enterprise ETL data warehouses, and robust Java Spring Boot and React applications built to production standards.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- PROJECT 1: AgriShield AI -->
+          <article class="project-card" data-category="ml ai">
+            <div class="project-image-wrap">
+              <img src="assets/images/projects/agrishield.svg" alt="AgriShield AI Crop Disease Early Warning System" class="project-image" width="800" height="450">
+              <span class="project-category-tag">PyTorch • Vision • Geospatial</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">AgriShield AI: Crop Disease Early Warning Platform</h3>
+              <p class="project-desc">
+                An end-to-end agricultural platform delivering real-time crop disease diagnosis, necrotic severity estimation, and regional outbreak surveillance to empower farmers and field officers.
+              </p>
+              <ul class="project-highlights">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>EfficientNet-B0:</strong> Transfer learning model trained on 20,000+ PlantVillage images across 15 classes.</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>OpenCV HSV Analysis:</strong> Automated disease severity scoring with Leaflet geospatial outbreak mapping.</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Multilingual GenAI:</strong> Google Gemini API integration delivering advice in English, Sinhala, and Tamil.</span>
+                </li>
+              </ul>
+              <div class="project-tags">
+                <span class="tag-pill">Python</span>
+                <span class="tag-pill">PyTorch</span>
+                <span class="tag-pill">FastAPI</span>
+                <span class="tag-pill">React</span>
+                <span class="tag-pill">PostgreSQL</span>
+                <span class="tag-pill">Gemini API</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <button class="btn btn-secondary btn-sm view-project-details-btn" data-project="agrishield">
+                <span>View Architecture</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <a href="https://github.com/ThevinduDha" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: StudyAI -->
+          <article class="project-card" data-category="ai se">
+            <div class="project-image-wrap">
+              <img src="assets/images/projects/studyai.svg" alt="StudyAI RAG Learning Platform" class="project-image" width="800" height="450">
+              <span class="project-category-tag">MERN • RAG • Vector Embeddings</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">StudyAI: AI-Powered Grounded Learning Platform</h3>
+              <p class="project-desc">
+                An intelligent university learning platform that utilizes Retrieval-Augmented Generation to ground AI-generated MCQs, flashcards, and answers in verified academic documents.
+              </p>
+              <ul class="project-highlights">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>RAG Pipeline:</strong> Semantic document chunking with Google text-embedding-004 vectors and cosine similarity.</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Hallucination-Proof AI:</strong> Accurate citation attribution linking every generated flashcard to source pages.</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Full-Stack Architecture:</strong> React frontend, Node/Express REST APIs, and MongoDB for user revisions.</span>
+                </li>
+              </ul>
+              <div class="project-tags">
+                <span class="tag-pill">React</span>
+                <span class="tag-pill">Node.js</span>
+                <span class="tag-pill">Express</span>
+                <span class="tag-pill">MongoDB</span>
+                <span class="tag-pill">Python</span>
+                <span class="tag-pill">Vector Search</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <button class="btn btn-secondary btn-sm view-project-details-btn" data-project="studyai">
+                <span>View Architecture</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <a href="https://github.com/ThevinduDha/studyAI" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Olist Data Warehouse -->
+          <article class="project-card" data-category="de db">
+            <div class="project-image-wrap">
+              <img src="assets/images/projects/olist_dw.svg" alt="Olist E-Commerce Data Warehouse and Power BI Analytics" class="project-image" width="800" height="450">
+              <span class="project-category-tag">SSIS • Star Schema • Power BI</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Enterprise E-Commerce Data Warehouse &amp; BI (Olist)</h3>
+              <p class="project-desc">
+                Architected an end-to-end analytical data warehouse integrating 99,000+ real transactions across CSV, JSON, and SQL Server with SSIS ETL and interactive Power BI OLAP dashboards.
+              </p>
+              <ul class="project-highlights">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Dimensional Modeling:</strong> Designed Star Schema and departmental data marts in SQL Server (MSSQL).</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>SSIS ETL Workflows:</strong> Automated data extraction, cleansing, deduplication, and surrogate key generation.</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>DAX Measures:</strong> Engineered OLAP metrics for customer lifetime value, logistics latency, and review sentiment.</span>
+                </li>
+              </ul>
+              <div class="project-tags">
+                <span class="tag-pill">Python</span>
+                <span class="tag-pill">SQL Server</span>
+                <span class="tag-pill">SSIS</span>
+                <span class="tag-pill">Data Modeling</span>
+                <span class="tag-pill">Power BI</span>
+                <span class="tag-pill">DAX</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <button class="btn btn-secondary btn-sm view-project-details-btn" data-project="olist_dw">
+                <span>View Architecture</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <a href="https://github.com/ThevinduDha/IT3101-Olist-DWBI" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: Hardware Restock System -->
+          <article class="project-card" data-category="se ml">
+            <div class="project-image-wrap">
+              <img src="assets/images/projects/hardware_restock.svg" alt="Hardware Inventory ML Restock System" class="project-image" width="800" height="450">
+              <span class="project-category-tag">Java Spring Boot • XGBoost • PayHere</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Smart Hardware Inventory &amp; ML Restocking System</h3>
+              <p class="project-desc">
+                Production inventory system built for Athukorala Traders featuring predictive stock replenishment via machine learning, automated PDF action plans, and a promotional discount engine.
+              </p>
+              <ul class="project-highlights">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Dual ML Predictors:</strong> Scikit-learn classification &amp; XGBoost regression to forecast restock quantity.</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Spring Boot Integration:</strong> Embedded Python models via Joblib &amp; ProcessBuilder for real-time recommendations.</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>E-Commerce Modules:</strong> Full CRUD discount engine, live pricing synchronization, and PayHere Sandbox gateway.</span>
+                </li>
+              </ul>
+              <div class="project-tags">
+                <span class="tag-pill">Java</span>
+                <span class="tag-pill">Spring Boot</span>
+                <span class="tag-pill">MySQL</span>
+                <span class="tag-pill">XGBoost</span>
+                <span class="tag-pill">Scikit-learn</span>
+                <span class="tag-pill">PayHere</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <button class="btn btn-secondary btn-sm view-project-details-btn" data-project="hardware_restock">
+                <span>View Architecture</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <a href="https://github.com/ThevinduDha/Athukorala-Traders-System" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 5: LankaRail -->
+          <article class="project-card" data-category="se">
+            <div class="project-image-wrap">
+              <img src="assets/images/projects/lankarail.svg" alt="LankaRail Web-Based Train Reservation System" class="project-image" width="800" height="450">
+              <span class="project-category-tag">Spring Boot • MySQL • JWT Auth</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">LankaRail: Web Train Reservation System</h3>
+              <p class="project-desc">
+                Enterprise rail booking engine built with Spring Boot and MySQL for passenger ticketing, seat allocation, automated e-ticket issuance, and administrative schedule controls.
+              </p>
+              <ul class="project-highlights">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Train Management CRUD:</strong> Developed REST APIs for train frequencies, stations, fares, and coach allocations.</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Role-Based Security:</strong> JWT authentication separating passenger booking access from station staff.</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Agile Collaboration:</strong> API validation with Postman in a 6-developer university engineering team.</span>
+                </li>
+              </ul>
+              <div class="project-tags">
+                <span class="tag-pill">Java</span>
+                <span class="tag-pill">Spring Boot</span>
+                <span class="tag-pill">MySQL</span>
+                <span class="tag-pill">JWT</span>
+                <span class="tag-pill">REST APIs</span>
+                <span class="tag-pill">Postman</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <button class="btn btn-secondary btn-sm view-project-details-btn" data-project="lankarail">
+                <span>View Architecture</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <a href="https://github.com/ThevinduDha/Train-Reservation-Website" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 6: Groove Haven -->
+          <article class="project-card" data-category="se">
+            <div class="project-image-wrap">
+              <img src="assets/images/projects/groove_haven.svg" alt="Groove Haven Online Music Store & Streaming Platform" class="project-image" width="800" height="450">
+              <span class="project-category-tag">React Vite • Spring Data JPA • Hibernate</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Groove Haven: Music Streaming Platform</h3>
+              <p class="project-desc">
+                Full-stack social streaming application with custom React audio visualizer, artist analytics dashboard, multipart media uploads, and relational Hibernate schema.
+              </p>
+              <ul class="project-highlights">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Audio Player Engine:</strong> Play/pause, scrubbing slider, volume attenuation, and track queue management.</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Artist Dashboard:</strong> Real-time stream telemetry, listener engagement metrics, and album management.</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Social Engagement:</strong> Track likes, custom playlist creation, and threaded comment conversations.</span>
+                </li>
+              </ul>
+              <div class="project-tags">
+                <span class="tag-pill">Java</span>
+                <span class="tag-pill">Spring Boot</span>
+                <span class="tag-pill">Hibernate</span>
+                <span class="tag-pill">React (Vite)</span>
+                <span class="tag-pill">MySQL</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <button class="btn btn-secondary btn-sm view-project-details-btn" data-project="groove_haven">
+                <span>View Architecture</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <a href="https://github.com/ThevinduDha/Groove-Haven-Music-Store" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNEY, HACKATHONS & CERTIFICATIONS TIMELINE -->
+    <section class="section-wrapper journey-timeline-section" id="timeline">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Milestones &amp; Recognition</span>
+          <h2 class="section-title">Hackathons, Honors &amp; <span class="text-gradient">Certifications</span></h2>
+          <p class="section-desc">
+            A track record of competitive programming success, academic honors, and continuous professional mastery.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Item 1: Mini Hackathon 1st Place -->
+          <div class="timeline-item">
+            <div class="timeline-node">
+              <div class="timeline-node-inner" style="background: #f59e0b;"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-date">August 2026</span>
+                <span class="timeline-badge badge-gold">🏆 Champion (1st Place)</span>
+              </div>
+              <h3 class="timeline-title">Mini Hackathon 2026 Champion</h3>
+              <div class="timeline-subtitle">Sri Lanka Institute of Information Technology (SLIIT)</div>
+              <p class="timeline-desc">
+                Awarded 1st Place Champion out of university engineering teams for conceiving, developing, and pitching an end-to-end software and AI prototype within strict competition time limits.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2: CodeArena Hackathon Finalist -->
+          <div class="timeline-item">
+            <div class="timeline-node">
+              <div class="timeline-node-inner" style="background: #a855f7;"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-date">September 2026</span>
+                <span class="timeline-badge badge-purple">🎯 Top 10 Finalist Team</span>
+              </div>
+              <h3 class="timeline-title">CodeArena 2026 Hackathon Finalist</h3>
+              <div class="timeline-subtitle">General Sir John Kotelawala Defence University (KDU)</div>
+              <p class="timeline-desc">
+                Selected as a Top 10 Finalist Team in a national inter-university hackathon, demonstrating rapid problem solving, system design, and algorithmic execution.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3: Dean's List Award -->
+          <div class="timeline-item">
+            <div class="timeline-node">
+              <div class="timeline-node-inner" style="background: #00dfd8;"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-date">January 2026</span>
+                <span class="timeline-badge badge-cyan">🎖️ Academic Excellence</span>
+              </div>
+              <h3 class="timeline-title">Dean's List Award (Year 1, Semester 2)</h3>
+              <div class="timeline-subtitle">Faculty of Computing, SLIIT</div>
+              <p class="timeline-desc">
+                Conferred the Dean's List Award for achieving top academic honors and demonstrating superior performance across data structures, machine learning, and software engineering coursework.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4: Databricks Certification -->
+          <div class="timeline-item">
+            <div class="timeline-node">
+              <div class="timeline-node-inner"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-date">July 2026</span>
+                <span class="timeline-badge badge-cyan">📜 Professional Credential</span>
+              </div>
+              <h3 class="timeline-title">Get Started with Databricks for Data Engineering</h3>
+              <div class="timeline-subtitle">Databricks Academy</div>
+              <p class="timeline-desc">
+                Certified in Lakehouse architecture, Apache Spark data transformations, Delta Lake storage, and production cloud data pipeline concepts.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 5: SLIIT AI/ML Engineer Stages 1 & 2 -->
+          <div class="timeline-item">
+            <div class="timeline-node">
+              <div class="timeline-node-inner"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-date">June 2026</span>
+                <span class="timeline-badge badge-purple">📜 Professional Credential</span>
+              </div>
+              <h3 class="timeline-title">AI / ML Engineer (Stage 1 &amp; Stage 2)</h3>
+              <div class="timeline-subtitle">SLIIT Computing &amp; Machine Learning Academy</div>
+              <p class="timeline-desc">
+                Completed rigorous dual-stage technical specialization in supervised/unsupervised machine learning, neural networks, feature engineering, and model deployment.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Reference Spotlight -->
+        <div class="reference-card-wrap">
+          <div class="ref-info">
+            <div class="ref-avatar">PM</div>
+            <div>
+              <div class="ref-name">Pasindu Mihiran</div>
+              <div class="ref-role">Software Engineer, IFS</div>
+              <div class="ref-contact">Mihiranp481@gmail.com • +94 76 281 7216</div>
+            </div>
+          </div>
+          <div>
+            <a href="mailto:Mihiranp481@gmail.com" class="btn btn-secondary btn-sm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Contact Reference</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION & WORKING EMAIL FORM -->
+    <section class="section-wrapper" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Get in Touch</span>
+          <h2 class="section-title">Let's Build Something <span class="text-gradient">Extraordinary</span></h2>
+          <p class="section-desc">
+            Interested in discussing an internship, machine learning project, full-stack application, or collaboration? Drop me a message below.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Details -->
+          <div class="contact-info-col">
+            <!-- Email -->
+            <div class="contact-card-item">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div style="flex-grow: 1;">
+                <div class="contact-card-label">Direct Email</div>
+                <div class="contact-card-val">thevinduhansaja81@gmail.com</div>
+              </div>
+              <button class="btn btn-secondary btn-sm copy-email-trigger" title="Copy email address" aria-label="Copy Email">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-card-item">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div>
+                <div class="contact-card-label">Phone &amp; WhatsApp</div>
+                <div class="contact-card-val">+94 71 573 0413</div>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-card-item">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div>
+                <div class="contact-card-label">Location</div>
+                <div class="contact-card-val">Kaduwela / Colombo, Sri Lanka</div>
+              </div>
+            </div>
+
+            <!-- Social Banner -->
+            <div class="contact-card-item" style="flex-direction: column; align-items: flex-start; gap: 14px;">
+              <div class="contact-card-label">Connect Online</div>
+              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="https://linkedin.com/in/thevindu-dharmadasa" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/ThevinduDha" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://twitter.com/thevinduhansaja" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  <span>Twitter / X</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact-form-panel">
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-row-dual">
+                <div class="form-group">
+                  <label for="form-name" class="form-label">Your Name *</label>
+                  <input type="text" id="form-name" class="form-input" placeholder="e.g. Alexander Vance" required>
+                </div>
+                <div class="form-group">
+                  <label for="form-email" class="form-label">Email Address *</label>
+                  <input type="email" id="form-email" class="form-input" placeholder="alexander@company.com" required>
+                </div>
+              </div>
+
+              <div class="form-row-dual">
+                <div class="form-group">
+                  <label for="form-category" class="form-label">Topic / Area of Interest</label>
+                  <select id="form-category" class="form-select">
+                    <option value="Data Science &amp; AI">Data Science &amp; AI Project</option>
+                    <option value="Software Engineering">Software Engineering &amp; Web App</option>
+                    <option value="Internship Opportunity">Internship / Full-Time Role</option>
+                    <option value="Data Engineering &amp; BI">Data Warehousing &amp; Power BI</option>
+                    <option value="General Inquiry">General Inquiries</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="form-subject" class="form-label">Subject</label>
+                  <input type="text" id="form-subject" class="form-input" placeholder="Project collaboration / Opportunity" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Your Message *</label>
+                <textarea id="form-message" class="form-textarea" placeholder="Describe your project, timeline, or opportunity in detail..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="form-submit-btn" style="width: 100%;">
+                <span>Send Message</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom: 14px;">
+            <div class="logo-badge">TD</div>
+            <span>THEVINDU DHARMADASA</span>
+          </div>
+          <p style="font-size: 0.94rem; max-width: 440px;">
+            Transforming raw data into actionable intelligence and building scalable, high-performance software systems.
+          </p>
+          <div style="margin-top: 18px; font-family: var(--font-mono); font-size: 0.84rem; color: var(--accent-cyan);">
+            📍 Colombo, Sri Lanka • Local Time: <span id="sri-lanka-time">--:--:--</span>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#resume-spotlight">Dual Resumes (DS &amp; SE)</a></li>
+            <li><a href="#skills">Tech Arsenal</a></li>
+            <li><a href="#projects">Featured Projects</a></li>
+            <li><a href="#timeline">Awards &amp; Journey</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Downloads &amp; Social</h4>
+          <ul class="footer-links-list">
+            <li><a href="javascript:void(0)" onclick="downloadResume('ds')">Download Data Science CV</a></li>
+            <li><a href="javascript:void(0)" onclick="downloadResume('se')">Download Software Eng CV</a></li>
+            <li><a href="https://github.com/ThevinduDha" target="_blank" rel="noopener noreferrer">GitHub Profile</a></li>
+            <li><a href="https://linkedin.com/in/thevindu-dharmadasa" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
+            <li><a href="https://twitter.com/thevinduhansaja" target="_blank" rel="noopener noreferrer">Twitter / X</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Thevindu Dharmadasa. All rights reserved. Crafted with clean code &amp; mathematical precision.
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <a href="https://github.com/ThevinduDha/portfolio-website" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); font-weight: 600;">
+            ⭐ View Repository on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DUAL RESUME COMPARISON MODAL -->
+  <div class="modal-overlay" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+    <div class="modal-content" style="max-width: 820px;">
+      <div class="modal-header">
+        <h3 class="modal-title" id="resume-modal-title">Download Thevindu's Specialized CV</h3>
+        <button class="modal-close-btn" id="close-resume-modal" aria-label="Close resume modal">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+          Select the resume tailored to your target hiring requirements. Both documents contain verified educational qualifications, hackathon championships, and project metrics.
+        </p>
+
+        <div class="resume-dual-grid" style="grid-template-columns: 1fr 1fr; gap: 20px;">
+          <!-- Option A -->
+          <div class="glass-panel" style="padding: 24px; border-top: 3px solid #00dfd8; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="resume-track-tag" style="background: rgba(0, 223, 216, 0.15); color: var(--accent-cyan);">Data Science Track</span>
+              <h4 style="font-size: 1.15rem; margin: 10px 0 8px 0;">Data Science, AI &amp; BI</h4>
+              <p style="font-size: 0.86rem; color: var(--text-secondary); margin-bottom: 16px;">
+                Emphasizes deep learning (PyTorch, EfficientNet, OpenCV), ETL data warehousing (SSIS, SQL Server), Star Schema, and Power BI DAX analytics.
+              </p>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <button class="btn btn-primary btn-sm" onclick="downloadResume('ds')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Download DS Resume (PDF)</span>
+              </button>
+              <a href="assets/cv/Thevindu_Dharmadasa_DataScience_CV.pdf" target="_blank" class="btn btn-secondary btn-sm">
+                <span>View Full PDF</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Option B -->
+          <div class="glass-panel" style="padding: 24px; border-top: 3px solid #8b5cf6; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="resume-track-tag" style="background: rgba(139, 92, 246, 0.15); color: var(--accent-purple);">Software Eng Track</span>
+              <h4 style="font-size: 1.15rem; margin: 10px 0 8px 0;">Software Engineering &amp; Full-Stack</h4>
+              <p style="font-size: 0.86rem; color: var(--text-secondary); margin-bottom: 16px;">
+                Emphasizes object-oriented backend architecture (Java, Spring Boot, JPA, Hibernate), React/Vite frontends, JWT security, and relational MySQL schemas.
+              </p>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <button class="btn btn-primary btn-sm" onclick="downloadResume('se')" style="background: var(--gradient-brand);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Download SE Resume (PDF)</span>
+              </button>
+              <a href="assets/cv/Thevindu_Dharmadasa_SoftwareEngineering_CV.pdf" target="_blank" class="btn btn-secondary btn-sm">
+                <span>View Full PDF</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT DEEP-DIVE MODAL -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title" id="modal-project-title">Project Title</h3>
+          <span id="modal-project-category" style="font-size: 0.82rem; color: var(--accent-cyan); font-weight: 600;">Category</span>
+        </div>
+        <button class="modal-close-btn" id="close-project-modal" aria-label="Close project details">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div>
+          <h4 style="font-size: 0.95rem; text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 8px;">Executive Summary</h4>
+          <p id="modal-project-desc" style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">Description here.</p>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.95rem; text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 12px;">Technical Stack &amp; Libraries</h4>
+          <div id="modal-project-tech" style="display: flex; flex-wrap: wrap; gap: 8px;"></div>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.95rem; text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 12px;">Key Engineering Highlights</h4>
+          <ul id="modal-project-highlights" class="project-highlights" style="gap: 12px;"></ul>
+        </div>
+
+        <div style="display: flex; gap: 14px; padding-top: 14px; border-top: 1px solid var(--border-subtle);">
+          <a href="#" id="modal-project-github" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            <span>Inspect GitHub Repository</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll-to-Top Button -->
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll to top of page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/canvas-bg.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
