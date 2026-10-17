@@ -261,10 +261,17 @@ img, svg {
 }
 
 .text-gradient {
-  background: var(--gradient-brand);
+  background: linear-gradient(135deg, #00dfd8 0%, #38bdf8 30%, #8b5cf6 65%, #ec4899 100%);
+  background-size: 250% 250%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+  animation: gradientFlow 10s ease infinite alternate;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
 .text-gradient-cyan {
@@ -823,17 +830,18 @@ img, svg {
 
 .avatar-glow-ring {
   position: absolute;
-  inset: -12px;
-  border-radius: 36px;
-  background: var(--gradient-brand);
-  filter: blur(24px);
-  opacity: 0.45;
-  animation: pulseGlow 5s ease-in-out infinite alternate;
+  inset: -14px;
+  border-radius: 40px;
+  background: conic-gradient(from 0deg, #00dfd8, #3b82f6, #8b5cf6, #ec4899, #00dfd8);
+  filter: blur(28px);
+  opacity: 0.55;
+  animation: rotateConicGlow 14s linear infinite;
+  will-change: transform;
 }
 
-@keyframes pulseGlow {
-  0% { opacity: 0.35; transform: scale(0.98); }
-  100% { opacity: 0.6; transform: scale(1.02); }
+@keyframes rotateConicGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .avatar-card {
@@ -2088,5 +2096,55 @@ img, svg {
   transform: translateY(-4px);
   border-color: var(--border-active);
   box-shadow: var(--shadow-glow);
+}
+
+/* --- Interactive Spotlight Following Mouse (Zero Lag) --- */
+.spotlight-card {
+  position: relative;
+  --mouse-x: -300px;
+  --mouse-y: -300px;
+}
+
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    400px circle at var(--mouse-x) var(--mouse-y),
+    rgba(0, 223, 216, 0.12),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+.ds-card.spotlight-card::before {
+  background: radial-gradient(
+    450px circle at var(--mouse-x) var(--mouse-y),
+    rgba(0, 223, 216, 0.16),
+    transparent 65%
+  );
+}
+
+.se-card.spotlight-card::before {
+  background: radial-gradient(
+    450px circle at var(--mouse-x) var(--mouse-y),
+    rgba(139, 92, 246, 0.16),
+    transparent 65%
+  );
+}
+
+/* 3D Tilt Card Container */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  will-change: transform;
 }
 

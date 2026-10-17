@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileDrawer();
   initSriLankaClock();
   initScrollReveal();
+  initSpotlightCards();
+  init3DTilt();
 });
 
 /* ==========================================================================
@@ -763,5 +765,50 @@ function initScrollReveal() {
   });
 
   revealElements.forEach(el => observer.observe(el));
+}
+
+/* ==========================================================================
+   15. INTERACTIVE MOUSE SPOTLIGHT (ZERO-LAG MOUSE POSITIONING)
+   ========================================================================== */
+function initSpotlightCards() {
+  const spotlightCards = document.querySelectorAll('.spotlight-card');
+  if (!spotlightCards.length) return;
+
+  spotlightCards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+}
+
+/* ==========================================================================
+   16. SUBTLE 3D CARD TILT (REDUCED MOTION COMPLIANT)
+   ========================================================================== */
+function init3DTilt() {
+  const tiltElements = document.querySelectorAll('.tilt-card');
+  if (!tiltElements.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  tiltElements.forEach(el => {
+    let frameId = null;
+
+    el.addEventListener('mousemove', e => {
+      if (frameId) cancelAnimationFrame(frameId);
+      frameId = requestAnimationFrame(() => {
+        const rect = el.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        el.style.transform = `perspective(900px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateY(-6px)`;
+      });
+    });
+
+    el.addEventListener('mouseleave', () => {
+      if (frameId) cancelAnimationFrame(frameId);
+      el.style.transform = '';
+    });
+  });
 }
 

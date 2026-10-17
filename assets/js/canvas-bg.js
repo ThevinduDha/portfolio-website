@@ -45,11 +45,14 @@
     if (this.x < 0 || this.x > width) this.vx = -this.vx;
     if (this.y < 0 || this.y > height) this.vy = -this.vy;
 
-    // Mouse interaction (gentle repel)
+    // Mouse interaction (gentle repel with distance-squared for 0 lag)
     const dx = mouse.x - this.x;
     const dy = mouse.y - this.y;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    if (dist < mouse.radius) {
+    const distSq = dx * dx + dy * dy;
+    const radiusSq = mouse.radius * mouse.radius;
+
+    if (distSq < radiusSq && distSq > 0) {
+      const dist = Math.sqrt(distSq);
       const force = (mouse.radius - dist) / mouse.radius;
       const angle = Math.atan2(dy, dx);
       this.x -= Math.cos(angle) * force * 1.5;
@@ -77,15 +80,18 @@
   function drawLines(theme) {
     const isDark = theme !== 'light';
     const maxDist = 110;
+    const maxDistSq = maxDist * maxDist;
     const particleLength = particles.length;
 
     for (let i = 0; i < particleLength; i++) {
       for (let j = i + 1; j < particleLength; j++) {
         const dx = particles[i].x - particles[j].x;
         const dy = particles[i].y - particles[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
+        const distSq = dx * dx + dy * dy;
 
-        if (dist < maxDist) {
+        // Fast distance-squared rejection avoids costly Math.sqrt on non-connected pairs
+        if (distSq < maxDistSq) {
+          const dist = Math.sqrt(distSq);
           const alpha = (1 - dist / maxDist) * (isDark ? 0.18 : 0.12);
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
