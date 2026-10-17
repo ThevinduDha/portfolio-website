@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbarScroll();
   initScrollSpy();
   initCounterStats();
-  initProjectFiltering();
+  initSkillsFiltering();
   initProjectModal();
   initResumeModal();
   initTerminalTabs();
@@ -258,13 +258,13 @@ function initResumeModal() {
 }
 
 /* ==========================================================================
-   6. PROJECT FILTERING
+   6. SKILLS & TECHNICAL ARSENAL FILTERING
    ========================================================================== */
-function initProjectFiltering() {
-  const filterBtns = document.querySelectorAll('.filter-btn[data-filter]');
-  const projectCards = document.querySelectorAll('.project-card[data-category]');
+function initSkillsFiltering() {
+  const filterBtns = document.querySelectorAll('.skills-filter-nav .filter-btn');
+  const skillCards = document.querySelectorAll('.skills-grid .skill-card');
 
-  if (!filterBtns.length) return;
+  if (!filterBtns.length || !skillCards.length) return;
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -273,21 +273,25 @@ function initProjectFiltering() {
 
       const filterValue = btn.getAttribute('data-filter');
 
-      projectCards.forEach(card => {
-        const categories = card.getAttribute('data-category').split(' ');
+      skillCards.forEach(card => {
+        const categories = (card.getAttribute('data-category') || '').split(' ');
 
         if (filterValue === 'all' || categories.includes(filterValue)) {
           card.style.display = 'flex';
-          setTimeout(() => {
+          requestAnimationFrame(() => {
             card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }, 20);
+            card.style.transform = 'translateY(0) scale(1)';
+          });
         } else {
           card.style.opacity = '0';
-          card.style.transform = 'translateY(15px)';
+          card.style.transform = 'translateY(12px) scale(0.96)';
           setTimeout(() => {
-            card.style.display = 'none';
-          }, 250);
+            const currentActiveBtn = document.querySelector('.skills-filter-nav .filter-btn.active');
+            const currentFilter = currentActiveBtn ? currentActiveBtn.getAttribute('data-filter') : 'all';
+            if (currentFilter !== 'all' && !categories.includes(currentFilter)) {
+              card.style.display = 'none';
+            }
+          }, 200);
         }
       });
     });
@@ -506,7 +510,7 @@ function initTerminalTabs() {
         <span class="code-var">self</span>.name = <span class="code-string">"Thevindu Dharmadasa"</span>
         <span class="code-var">self</span>.institution = <span class="code-string">"SLIIT (Sri Lanka)"</span>
         <span class="code-var">self</span>.degree = <span class="code-string">"B.Sc. (Hons) in Data Science"</span>
-        <span class="code-var">self</span>.gpa = <span class="code-num">3.5</span>  <span class="code-comment"># Dean's List Awardee</span>
+        <span class="code-var">self</span>.honors = [<span class="code-string">"Dean's List Awardee"</span>, <span class="code-string">"Hackathon Champion"</span>]
         <span class="code-var">self</span>.specializations = [
             <span class="code-string">"Data Science & AI/ML"</span>,
             <span class="code-string">"Full-Stack Software Engineering"</span>,

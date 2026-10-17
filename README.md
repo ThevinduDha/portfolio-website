@@ -24,7 +24,7 @@
   - **Data Science & AI Track:** Focuses on PyTorch (EfficientNet-B0), OpenCV HSV severity analysis, SSIS data warehousing, Star Schemas, and Power BI DAX.
   - **Software Engineering & Systems Track:** Focuses on Java Spring Boot REST APIs, JPA/Hibernate, React/Vite frontends, JWT authentication, and MySQL.
 - 🎨 **Rich Cyber-Editorial Aesthetics**: Glassmorphic panels, glowing neon accents, and interactive constellation background driven by high-performance HTML5 Canvas.
-- 📊 **Dynamic Live Metrics Counter**: IntersectionObserver-triggered animated counters celebrating 3.5 CGPA, 20+ repositories, 99K+ records analyzed, and 1st place hackathon championship.
+- ⚡ **Interactive Skills Filter Engine**: Dynamic category filtering across languages, deep learning frameworks, databases, and enterprise backends.
 - 💻 **Interactive Developer Terminal**: Embedded Python / JSON / Markdown terminal card with live tab switching.
 - 🚀 **Filterable Production Projects Showcase**: Detailed modals with architectural breakdowns for *AgriShield AI*, *StudyAI*, *Olist Data Warehouse*, *Smart Hardware ML System*, *LankaRail*, and *Groove Haven*.
 - 📬 **Interactive Working Contact Engine**: Validated client-side form with direct `mailto:` handler and one-click copy toast notifications.
