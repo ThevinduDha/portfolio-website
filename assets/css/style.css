@@ -1734,9 +1734,9 @@ img, svg {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(3, 7, 18, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(3, 7, 18, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   z-index: 2000;
   display: flex;
   align-items: center;
@@ -1744,7 +1744,7 @@ img, svg {
   padding: 24px;
   opacity: 0;
   visibility: hidden;
-  transition: all var(--transition-fast);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .modal-overlay.active {
@@ -1754,21 +1754,24 @@ img, svg {
 
 .modal-content {
   background: var(--bg-glass-elevated);
-  backdrop-filter: blur(25px);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.8), 0 0 35px rgba(0, 223, 216, 0.14);
   width: 100%;
   max-width: 720px;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  transform: translateY(20px) scale(0.97);
-  transition: all var(--transition-normal);
+  transform: translateY(28px) scale(0.95);
+  opacity: 0;
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s ease, box-shadow 0.38s ease;
 }
 
 .modal-overlay.active .modal-content {
   transform: translateY(0) scale(1);
+  opacity: 1;
 }
 
 .modal-header {
@@ -1826,19 +1829,20 @@ img, svg {
   border-radius: var(--radius-md);
   background: var(--bg-glass-elevated);
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.6), 0 0 20px var(--accent-cyan-glow);
   color: var(--text-primary);
   font-size: 0.92rem;
   font-weight: 600;
   pointer-events: auto;
-  transform: translateX(100px);
+  transform: translateX(40px) scale(0.92);
   opacity: 0;
-  transition: all var(--transition-normal);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
 }
 
 .toast.show {
-  transform: translateX(0);
+  transform: translateX(0) scale(1);
   opacity: 1;
 }
 
@@ -2011,3 +2015,78 @@ img, svg {
     bottom: 20px;
   }
 }
+
+/* ==========================================================================
+   POPUP & SCROLL REVEAL MICRO-ANIMATIONS
+   ========================================================================== */
+
+/* Smooth Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for grid children */
+.reveal-delay-1 { transition-delay: 0.08s; }
+.reveal-delay-2 { transition-delay: 0.16s; }
+.reveal-delay-3 { transition-delay: 0.24s; }
+.reveal-delay-4 { transition-delay: 0.32s; }
+
+/* Shimmer Light-Sweep on Interactive Cards (Zero GPU Lag) */
+.project-card, .resume-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::after, .resume-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.project-card:hover::after, .resume-card:hover::after {
+  left: 160%;
+}
+
+/* Tactile Physical Button Click Pop */
+.btn:active, .filter-btn:active, .modal-close-btn:active, .theme-toggle-btn:active {
+  transform: scale(0.96) !important;
+}
+
+/* Micro-hover on pills & badges */
+.hero-badge-pill, .skill-card, .timeline-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.25s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 10px 25px -5px var(--accent-cyan-glow);
+}
+
+.timeline-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-active);
+  box-shadow: var(--shadow-glow);
+}
+

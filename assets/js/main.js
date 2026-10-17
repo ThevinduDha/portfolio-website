@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollTop();
   initMobileDrawer();
   initSriLankaClock();
+  initScrollReveal();
 });
 
 /* ==========================================================================
@@ -736,3 +737,31 @@ function initSriLankaClock() {
   update();
   setInterval(update, 1000);
 }
+
+/* ==========================================================================
+   14. SMOOTH SCROLL REVEAL (INTERSECTION OBSERVER)
+   ========================================================================== */
+function initScrollReveal() {
+  const revealElements = document.querySelectorAll('.reveal');
+  if (!revealElements.length) return;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    revealElements.forEach(el => el.classList.add('revealed'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.08,
+    rootMargin: '0px 0px -30px 0px'
+  });
+
+  revealElements.forEach(el => observer.observe(el));
+}
+

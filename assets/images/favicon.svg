@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="tdGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00dfd8"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00dfd8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#090d16"/>
+  <circle cx="32" cy="32" r="28" fill="url(#bgGlow)"/>
+  <rect x="2.5" y="2.5" width="59" height="59" rx="13.5" fill="none" stroke="url(#tdGrad)" stroke-width="2.5"/>
+  <text x="32" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Outfit', 'Segoe UI', sans-serif" font-weight="900" font-size="25" text-anchor="middle" fill="url(#tdGrad)" letter-spacing="1.5">TD</text>
+</svg>
