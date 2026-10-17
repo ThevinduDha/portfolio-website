@@ -1,0 +1,95 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="railBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1a28" />
+      <stop offset="50%" stop-color="#102a45" />
+      <stop offset="100%" stop-color="#07121d" />
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" rx="16" fill="url(#railBg)"/>
+
+  <!-- Left: Booking & Train Route Card -->
+  <rect x="70" y="70" width="370" height="310" rx="14" fill="#0c1d2e" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1.5"/>
+  <rect x="70" y="70" width="370" height="42" rx="14" fill="#132a42"/>
+  <circle cx="95" cy="91" r="5" fill="#ef4444"/>
+  <circle cx="112" cy="91" r="5" fill="#f59e0b"/>
+  <circle cx="129" cy="91" r="5" fill="#10b981"/>
+  <text x="145" y="96" fill="#e0f2fe" font-family="system-ui, sans-serif" font-size="12" font-weight="600">LankaRail // Express Booking Portal</text>
+
+  <!-- Route Bar -->
+  <rect x="95" y="130" width="320" height="65" rx="10" fill="#142c44"/>
+  <text x="115" y="155" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="11">Colombo Fort</text>
+  <text x="115" y="177" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">06:00 AM</text>
+  
+  <line x1="220" y1="162" x2="280" y2="162" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="280" cy="162" r="4" fill="#38bdf8"/>
+  <text x="230" y="154" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="9" font-weight="600">PODI MENIKE</text>
+
+  <text x="315" y="155" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="11">Kandy / Badulla</text>
+  <text x="315" y="177" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">11:15 AM</text>
+
+  <!-- Seat Selection & Class Info -->
+  <rect x="95" y="210" width="150" height="75" rx="8" fill="#142c44" stroke="#0284c7" stroke-opacity="0.3"/>
+  <text x="110" y="233" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Class &amp; Seat</text>
+  <text x="110" y="255" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="700">1st Class (A-14)</text>
+  <text x="110" y="273" fill="#4ade80" font-family="system-ui, sans-serif" font-size="10">Confirmed • Paid</text>
+
+  <rect x="260" y="210" width="155" height="75" rx="8" fill="#142c44" stroke="#0284c7" stroke-opacity="0.3"/>
+  <text x="275" y="233" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">JWT Authentication</text>
+  <text x="275" y="255" fill="#facc15" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Role-Based Access</text>
+  <text x="275" y="273" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="10">Passenger &amp; Admin</text>
+
+  <!-- E-ticket generator trigger -->
+  <rect x="95" y="300" width="320" height="55" rx="8" fill="#0284c7"/>
+  <text x="180" y="333" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Instant PDF E-Ticket Generated 🎫</text>
+
+  <!-- Right: Digital E-Ticket Mockup -->
+  <rect x="470" y="70" width="270" height="310" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="470" y="70" width="270" height="60" rx="14" fill="#0369a1"/>
+  <text x="495" y="98" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="800">SRI LANKA RAILWAYS</text>
+  <text x="495" y="115" fill="#bae6fd" font-family="system-ui, sans-serif" font-size="10">Electronic Passenger Ticket</text>
+
+  <text x="495" y="155" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Passenger Name</text>
+  <text x="495" y="172" fill="#0f172a" font-family="system-ui, sans-serif" font-size="12" font-weight="700">THEVINDU DHARMADASA</text>
+
+  <text x="495" y="200" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Train / Carriage / Seat</text>
+  <text x="495" y="217" fill="#0369a1" font-family="system-ui, sans-serif" font-size="12" font-weight="700">1005 Podi Menike • Car 3 • S24</text>
+
+  <!-- Mock QR Barcode -->
+  <rect x="495" y="240" width="220" height="50" rx="4" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <g fill="#1e293b">
+    <rect x="505" y="248" width="6" height="34"/>
+    <rect x="515" y="248" width="3" height="34"/>
+    <rect x="522" y="248" width="8" height="34"/>
+    <rect x="534" y="248" width="4" height="34"/>
+    <rect x="542" y="248" width="10" height="34"/>
+    <rect x="556" y="248" width="5" height="34"/>
+    <rect x="565" y="248" width="8" height="34"/>
+    <rect x="577" y="248" width="3" height="34"/>
+    <rect x="584" y="248" width="6" height="34"/>
+    <rect x="594" y="248" width="9" height="34"/>
+    <rect x="607" y="248" width="4" height="34"/>
+    <rect x="615" y="248" width="8" height="34"/>
+    <rect x="627" y="248" width="4" height="34"/>
+    <rect x="635" y="248" width="10" height="34"/>
+    <rect x="649" y="248" width="5" height="34"/>
+    <rect x="658" y="248" width="7" height="34"/>
+    <rect x="669" y="248" width="4" height="34"/>
+    <rect x="677" y="248" width="6" height="34"/>
+    <rect x="687" y="248" width="8" height="34"/>
+    <rect x="699" y="248" width="4" height="34"/>
+  </g>
+  <text x="560" y="304" fill="#64748b" font-family="monospace" font-size="9">LR-2026-9812-OK</text>
+
+  <rect x="495" y="325" width="220" height="35" rx="6" fill="#0f172a"/>
+  <text x="525" y="347" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Validated via Spring Boot</text>
+
+  <!-- Tag Pill -->
+  <rect x="440" y="395" width="300" height="34" rx="17" fill="#132a42" stroke="#0284c7" stroke-opacity="0.5"/>
+  <text x="460" y="417" fill="#bae6fd" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Java Spring Boot • MySQL • JWT • REST APIs</text>
+</svg>
